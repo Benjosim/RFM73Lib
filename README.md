@@ -21,7 +21,7 @@ Here are simple examples for use as receiver and sender. They are meant to be us
 Receiver:
 
 This is an Example for a simple receiver, which prints all received data into the Serial Monitor of the ArduinoIDE
-
+ ```
 #include <rfm73.h>
 
 void setup(){
@@ -62,14 +62,14 @@ void receiveEvent(void){
   Serial.println((char*)RFM.getRcvBuffer());
 
 }
-
+ ```
 
 
 Sender:
 
 This is an Example for a simple sender, which send the data saved in array b every second
 An additional function is used to fill the array b with the variable a.
-
+ ```
 #include <rfm73.h>
 
 #include <stdio.h>
@@ -118,5 +118,6 @@ void writeValueToArray(int value, char* array, int arrayLength) {
     int valueLength = strlen(valueStr);
 
     strcpy(array, valueStr);
-    
+
 }
+ ```
